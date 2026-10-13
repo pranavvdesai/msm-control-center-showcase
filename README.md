@@ -4,6 +4,15 @@ Attendance and cohort companion built for the MSM (Marketing and Sales Managemen
 
 **Live demo:** https://msm-control-center-showcase.vercel.app
 **Demo login:** roll number `DM136` (admin view) or any `DM101` to `DM150`, password `demo1234`
+**Portfolio and case study:** https://ram-pareek-portfolio.vercel.app/#msm
+
+| Dashboard | Mark leave | Per-subject risk |
+|---|---|---|
+| ![Dashboard](docs/screenshots/msm-real-02-dashboard.jpg) | ![Mark leave](docs/screenshots/msm-real-04-mark-leave.jpg) | ![Risk cards](docs/screenshots/msm-real-05-subject-risk-cards.jpg) |
+| **Timetable** | **Admin analytics** | **Daily Sudoku** |
+| ![Timetable](docs/screenshots/msm-real-06-timetable.jpg) | ![Analytics](docs/screenshots/msm-real-07-analytics.jpg) | ![Daily Sudoku](docs/screenshots/msm-real-08-daily-sudoku.jpg) |
+| **Welcome animation** | **Birthday celebration** | **About page (photos removed)** |
+| ![Welcome](docs/screenshots/msm-real-01-welcome-animation.jpg) | ![Birthday](docs/screenshots/msm-real-03-birthday-splash.jpg) | ![About](docs/screenshots/msm-real-09-about-privacy-placeholders.jpg) |
 
 ## What this repository is
 
