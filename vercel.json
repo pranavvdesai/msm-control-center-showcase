@@ -1,0 +1,6 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "prisma generate --schema=prisma/schema.sqlite.prisma && next build",
+  "installCommand": "npm install",
+  "regions": ["bom1"]
+}
