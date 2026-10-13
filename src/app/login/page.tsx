@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { GlowButton } from "@/components/GlowButton";
 import { DeveloperBadge } from "@/components/DeveloperBadge";
-import { Shield, Zap, Users, TrendingUp } from "lucide-react";
+import { Shield, Zap, Users, TrendingUp, KeyRound } from "lucide-react";
+
+const DEMO_ROLL = "DM136";
+const DEMO_PASSWORD = "demo1234";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -107,7 +110,41 @@ export default function LoginPage() {
           <h2 className="text-2xl font-bold text-slate-900">Sign in</h2>
           <p className="mt-1 text-sm text-slate-500">Use your MSM roll number</p>
 
-          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+          <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-4">
+            <div className="flex items-center gap-2">
+              <KeyRound className="h-4 w-4 text-amber-700" />
+              <p className="text-sm font-semibold text-amber-900">Demo login</p>
+              <span className="ml-auto rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-900">
+                Fictional data
+              </span>
+            </div>
+            <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
+              <dt className="text-amber-800">Username (roll number)</dt>
+              <dd>
+                <code className="rounded bg-white px-1.5 py-0.5 font-mono font-semibold text-slate-900">{DEMO_ROLL}</code>
+              </dd>
+              <dt className="text-amber-800">Password</dt>
+              <dd>
+                <code className="rounded bg-white px-1.5 py-0.5 font-mono font-semibold text-slate-900">{DEMO_PASSWORD}</code>
+              </dd>
+            </dl>
+            <p className="mt-2 text-xs text-amber-800">
+              {DEMO_ROLL} is the admin view (includes Analytics). Any roll number from DM101 to DM150 works with the same password.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setRollNumber(DEMO_ROLL);
+                setPassword(DEMO_PASSWORD);
+                setError("");
+              }}
+              className="mt-3 w-full rounded-xl border border-amber-400 bg-white py-2 text-sm font-semibold text-amber-900 transition hover:bg-amber-100"
+            >
+              Fill demo login
+            </button>
+          </div>
+
+          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <Field
               label="Roll Number"
               value={rollNumber}
@@ -132,7 +169,7 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-6 text-center text-xs text-slate-500">
-            Cohort password shared by CR. First login? You&apos;ll set up your profile next.
+            Public demo of the real app. All students, subjects and stats are fictional.
           </p>
         </motion.div>
       </div>
